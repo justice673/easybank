@@ -72,7 +72,7 @@ const HeroSection = () => {
               <div className="lg:text-left lg:max-w-xl pt-32 pb-8" style={{ zIndex: 5 }}>
                 <h1 className="text-4xl tracking-tight font-normal text-gray-900 dark:text-white sm:text-5xl md:text-[3.25rem]">
                   <span className="block">Next generation</span>
-                  <span className="block text-gray-900 dark:text-white">digital banking</span>
+                  <span className="block pt-6 text-gray-900 dark:text-white">digital banking</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-lg">
                   Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
