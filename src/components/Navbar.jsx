@@ -25,24 +25,25 @@ const Navbar = () => {
 
                 {/* Dark Mode Toggle Button */}
                 <div
-                    className={`w-16 aspect-video rounded-xl ${darkMode ? "bg-[#3a3347]" : "bg-[#ebe6ef]"
+                    className={`w-16 aspect-video ${darkMode ? "bg-[#3a3347]" : "bg-[#ebe6ef]"
                         } border-4 border-[#121331]`}
                 >
-                    <div className="flex h-full w-full px-1 items-center gap-x-1">
-                        <div className="w-4 h-4 flex-shrink-0 rounded-full border-2 border-[#121331]"></div>
+                    <div className="flex h-full w-full px-1 items-center gap-x-1 relative">
+                        <div className="absolute bottom-1 left-1 w-4 h-4 flex-shrink-0 rounded-full border-2 border-[#121331]"></div>
+                        <div className="absolute bottom-2.5 right-1 w-4 h-1 flex-shrink-0 bg-[#121331] rounded-full"></div>
                         <label
                             htmlFor="switch"
-                            className={`w-full h-8 border-2 border-[#121331] rounded cursor-pointer ${darkMode ? "scale-x-[-1]" : ""
-                                }`}
+                            className="w-full h-8 cursor-pointer"
                         >
                             <input
                                 type="checkbox"
                                 id="switch"
-                                className="hidden"
+                                className="hidden peer"
                                 checked={darkMode}
                                 onChange={toggleDarkMode}
                             />
-                            <div className="w-full h-full bg-gradient-to-r from-green-400 to-cyan-500 relative">
+                            <div className={`w-8 h-8 bg-gradient-to-r from-green-400 to-cyan-500 relative transition-all duration-300 ${darkMode ? "translate-x-[100%]" : "translate-x-0"
+                                }`}>
                                 <div className="w-0 h-0 z-20 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-t-[14px] border-t-[#121331] relative">
                                     <div className="w-0 h-0 absolute border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[10px] border-t-green-500 -top-3 -left-[12px]"></div>
                                 </div>
@@ -50,7 +51,6 @@ const Navbar = () => {
                                 <div className="w-[17px] h-6 z-10 absolute top-[6px] left-[16px] bg-gradient-to-r from-green-400 to-cyan-500 border-r-2 border-l-1 border-b-2 border-[#121331] transform skew-y-[-39deg]"></div>
                             </div>
                         </label>
-                        <div className="w-4 h-1 flex-shrink-0 bg-[#121331] rounded-full"></div>
                     </div>
                 </div>
 
